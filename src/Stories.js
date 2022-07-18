@@ -2,7 +2,7 @@ function MenuStories(props) {
   return (
     <div class="story">
       <div class="imagem">
-        <img src={props.img} />
+        <img src={props.img} alt="foto" />
       </div>
       <div class="usuario">{props.usuario}</div>
     </div>
@@ -24,16 +24,12 @@ function Stories() {
     { image: "./img/memeriagourmet.svg", title: "memeriagourmet" },
   ];
   return (
-    <div class="corpo">
-      <div class="esquerda">
-        <div className="stories">
-          {contStories.map((storie) => (
-            <MenuStories img={storie.image} usuario={storie.title} />
-          ))}
-          <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
-          </div>
-        </div>
+    <div className="stories">
+      {contStories.map((storie) => (
+        <MenuStories img={storie.image} usuario={storie.title} />
+      ))}
+      <div className="setinha">
+        <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
     </div>
   );
