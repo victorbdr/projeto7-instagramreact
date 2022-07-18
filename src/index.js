@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import Header from "./Header";
-import Corpo from "./Corpo";
+import Corpo from "./Stories";
 function App() {
   return (
     <div>
@@ -9,5 +9,4 @@ function App() {
     </div>
   );
 }
-
 ReactDOM.render(<App />, document.querySelector(".root"));
